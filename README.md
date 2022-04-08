@@ -19,180 +19,25 @@ sudo apt-get install \
  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 
 ```
+Use the following command to set up the stable repository. To add the nightly or test repository, add the word nightly or test (or both) after the word stable in the commands below. Learn about nightly and test channels.
 
-
-
-# Getting Started as an Viewer 
-First, create a folder in our enevironment 
 ```sh
-mdkir <New Directory> 
-```
-
-# Getting Started as an Viewer 
-First, create a folder in our enevironment 
-```sh
-mdkir <New Directory> 
-```
-
-Change Directory into new folder created 
-```sh
-cd <New Directory> 
-```
-
-Clone the git repository 
-```sh
-git clone git@github.com:KinggCode/ElectronicShop.git
-```
-
-Open the Git folder in any text editor of your choice 
-Some available free editor can be found at Atom.io, Visual Studio, Notepad ++, Bracelets and many others 
-
-Make a duplicate copy of the env.example and name the new file .env
-```sh
-touch .env
-```
-Make sure you are the root diretcory of the Git folder before executing the command above 
-
-
-Now, it is time to copy all the content from the .env.example into our newly created file (.env)
-```sh
-cat .env.example > .env 
-```
-
-The .env contains the below content after copying 
-```sh
-APP_NAME=Laravel
-APP_ENV=local
-APP_KEY=
-APP_DEBUG=true
-APP_URL=http://localhost
-
-LOG_CHANNEL=stack
-LOG_DEPRECATIONS_CHANNEL=null
-LOG_LEVEL=debug
-
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=laravel
-DB_USERNAME=root
-DB_PASSWORD=
-
-BROADCAST_DRIVER=log
-CACHE_DRIVER=file
-FILESYSTEM_DISK=local
-QUEUE_CONNECTION=sync
-SESSION_DRIVER=database
-SESSION_LIFETIME=120
-
-MEMCACHED_HOST=127.0.0.1
-
-REDIS_HOST=127.0.0.1
-REDIS_PASSWORD=null
-REDIS_PORT=6379
-
-MAIL_MAILER=smtp
-MAIL_HOST=mailhog
-MAIL_PORT=1025
-MAIL_USERNAME=null
-MAIL_PASSWORD=null
-MAIL_ENCRYPTION=null
-MAIL_FROM_ADDRESS="hello@example.com"
-MAIL_FROM_NAME="${APP_NAME}"
-
-AWS_ACCESS_KEY_ID=
-AWS_SECRET_ACCESS_KEY=
-AWS_DEFAULT_REGION=us-east-1
-AWS_BUCKET=
-AWS_USE_PATH_STYLE_ENDPOINT=false
-
-PUSHER_APP_ID=
-PUSHER_APP_KEY=
-PUSHER_APP_SECRET=
-PUSHER_APP_CLUSTER=mt1
-
-MIX_PUSHER_APP_KEY="${PUSHER_APP_KEY}"
-MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
-
-GCP_PROJECT_ID=
-GCP_REGION_ID=
-GCP_ZONE_ID=
-GCP_SERVICE_ACCOUNT=
-GCS_BUCKET=electronic/
+ echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 ```
 
-Now its time to upate the database credentials to match the hosted DB or local server 
+#Install Docker Engine for Ubuntu 
 ```sh
-
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=laravel
-DB_USERNAME=root
-DB_PASSWORD=
-
-```
-Update Composer Package to enable artisan and other composer package
-Failure to do so would result in an error 
-```sh
-composer update 
+sudo apt-get install -y docker.io
 ```
 
-Update Composer Package to enable artisan and other composer package
-Failure to do so would result in an error 
+Check if the docker engine is installed successfully
 ```sh
-php artisan migrate:fresh
+docker -v 
 ```
 
-
-Upload some dummy entries into the dashboard 
-```sh
-php artisan db:seed
-```
-
-Run the PHP Engine
-```sh
-php artisan serve 
-```
-
-
-# Understanding Electronic Shop Directory 
-
-```sh
-Front 
-  |___ Cart
-    |___ index.blade.php
-  |___ Catalogue
-    |___ index.blade.php
-  |___ Checkout
-    |___ index.blade.php
-  |___ Components
-    |___ navbars
-        |___ default.blade.php
-    |___ styles
-        |___ default.blade.php
-    |___ scripts
-        |___ default.blade.php
-    |___ footers
-        |___ default.blade.php
-    |___ breadcrumbs
-        |___ default.blade.php
-    |___ information_bars
-        |___ default.blade.php
-    |___ product_modals
-        |___ default.blade.php
-  |___ Contact
-    |___ index.blade.php
-  |___ General
-    |___ home.blade.php
-  |___ Orders
-    |___ index.blade.php
-  |___ Shop
-    |___ index.blade.php
-  |___ Wishlist
-    |___ index.blade.php
-```
 
 # Git Best Practices for Team Collaboration
 When you're the only member working a project and pushing code to any repo, Git can be very basic. Everything is just add, commit, push, and repeat the cycle.
