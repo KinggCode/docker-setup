@@ -33,7 +33,12 @@ Use the following command to set up the stable repository. To add the nightly or
 sudo apt-get install -y docker.io
 ```
 
-Check if the docker engine is installed successfully
+Check if the docker engine is installed successfully and version installed
 ```sh
 docker -v 
+```
+
+Run Hello world app to check if docker engine is up and running
+```sh
+sudo docker run hello-world
 ```
