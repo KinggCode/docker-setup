@@ -42,3 +42,4 @@ Run Hello world app to check if docker engine is up and running
 ```sh
 sudo docker run hello-world
 ```
+This command downloads a test image and runs it in a container. When the container runs, it prints a message and exits.
