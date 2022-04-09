@@ -43,3 +43,16 @@ Run Hello world app to check if docker engine is up and running
 sudo docker run hello-world
 ```
 This command downloads a test image and runs it in a container. When the container runs, it prints a message and exits.
+
+#Uninstall Docker Engine for Ubuntu 
+```sh
+sudo apt-get install -y docker.io
+```
+
+#Remove all containers, images and volumes from directory 
+
+```sh
+sudo rm -rf /var/lib/docker
+sudo rm -rf /var/lib/containerd
+```
+
