@@ -6,7 +6,7 @@ Installation Set up for Linux Distros : Ubuntu, Debian, CentOs
 sudo apt-get update && sudo apt-get upgrade
 ```
 
-#Install docker packages 
+# Install docker packages 
 ```sh
 sudo apt-get install \
     ca-certificates \
@@ -28,7 +28,7 @@ Use the following command to set up the stable repository. To add the nightly or
 
 ```
 
-#Install Docker Engine for Ubuntu 
+# Install Docker Engine for Ubuntu 
 ```sh
 sudo apt-get install -y docker.io
 ```
@@ -44,7 +44,7 @@ sudo docker run hello-world
 ```
 This command downloads a test image and runs it in a container. When the container runs, it prints a message and exits.
 
-#Uninstall Docker Engine for Ubuntu 
+# Uninstall Docker Engine for Ubuntu 
 ```sh
 sudo apt-get install -y docker.io
 ```
@@ -55,4 +55,16 @@ sudo apt-get install -y docker.io
 sudo rm -rf /var/lib/docker
 sudo rm -rf /var/lib/containerd
 ```
+
+# DockerFile
+
+Run this to build Dockerfile 
+```sh 
+docker build -t node-app:1.0 .
+``
+
+# Display Docker Images 
+```sh
+sudo docker images 
+``
 
