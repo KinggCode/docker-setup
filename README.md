@@ -61,16 +61,37 @@ sudo rm -rf /var/lib/containerd
 Run this to build Dockerfile 
 ```sh 
 docker build -t node-app:1.0 .
-``
+```
 
 # Display Docker Images 
 ```sh
 sudo docker images 
-``
+```
 
 # Docker Commands 
+
+Download docker images from Docker Hub Registry 
+```sh 
+docker run <ImageName>
+```
+
+Display all docker images within the system 
+```sh 
+docker images
+```
+
+Display all docker images ID within the system 
+```sh 
+docker images -q
+```
+
+Show more details about an image  
+```sh 
+docker inspect <ImageName>
+```
+
 To delete a docker image
 ```sh 
 docker rmi <ImageID>
-``
+```
 
