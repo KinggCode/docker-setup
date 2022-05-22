@@ -68,3 +68,9 @@ docker build -t node-app:1.0 .
 sudo docker images 
 ``
 
+# Docker Commands 
+To delete a docker image
+```sh 
+docker rmi <ImageID>
+``
+
