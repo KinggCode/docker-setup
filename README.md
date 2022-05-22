@@ -133,5 +133,24 @@ Delete docker container
 docker rm <ContainerId>
 ```
 
+Pause a running docker container
+```sh 
+docker pause <ContainerId>
+```
 
+Unpause a running docker container
+```sh 
+docker pause <ContainerId>
+```
+
+# Docker Service Command 
+Start docker service 
+```sh 
+sudo service docker start 
+```
+
+Stop docker service
+```sh 
+sudo service docker stop 
+```
 
