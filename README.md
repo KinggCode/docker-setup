@@ -1,7 +1,7 @@
 # Docker Setup 
 Installation Set up for Linux Distros : Ubuntu, Debian, CentOs
 
-#Upgrade apt-get package 
+# Upgrade apt-get package 
 ```sh
 sudo apt-get update && sudo apt-get upgrade
 ```
@@ -94,4 +94,44 @@ To delete a docker image
 ```sh 
 docker rmi <ImageID>
 ```
+
+
+List all running containers within the system
+```sh 
+docker ps
+```
+
+List all containers within the system
+```sh 
+docker ps -a 
+```
+
+Get all commands run against the docker image 
+```sh 
+docker history <ImageID>
+
+OR
+
+docker history <ImageName>
+
+```
+
+# Docker Container Commands
+
+View top processes within the container
+```sh 
+docker top <ContainerId>
+```
+
+Stop docker container from running 
+```sh 
+docker stop <ContainerId>
+```
+
+Delete docker container
+```sh 
+docker rm <ContainerId>
+```
+
+
 
